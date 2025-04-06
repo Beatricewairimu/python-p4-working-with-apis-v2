@@ -1,6 +1,11 @@
 import unittest
+import sys
+import os
 from unittest.mock import patch, MagicMock
-from ..open_library_api import OpenLibraryAPI
+
+# Add parent directory to path to allow imports
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from open_library_api import OpenLibraryAPI
 
 class TestOpenLibraryAPI(unittest.TestCase):
     def setUp(self):
